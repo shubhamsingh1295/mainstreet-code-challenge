@@ -1,15 +1,41 @@
 <div class="container py-5">
   <h3>Companies</h3>
-  <%= link_to "+ Create a Company", new_company_path %><br>
+  <%= link_to new_company_path, class: "btn btn-primary float-right" do %>
+    <i class="fa fa-plus" aria-hidden="true"></i> Create a Company
+  <% end %><br><br>
   <% if @companies.empty? %>
   <p>No Companies Found</p>
   <% else %>
-    <ul class="list-group my-5">
-      <% @companies.each do |company| %>
-        <a href="<%= company_path(company) %>" class="list-group-item list-group-item-action">
-          <%= company.name %>
-        </a>
-      <% end %>
-    </ul>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr class="text-center">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @companies.each do |company| %>
+          <tr class="text-center">
+            <td><%= company.name %></td>
+            <td><%= company.email %></td>
+            <td><%= company.phone %></td>
+            <td>
+              <%= link_to company_path(company), class: "btn btn-default" do %>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to edit_company_path(company), class: "btn btn-default" do %>
+                <i class="fa fa-edit" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to company_path(company), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" do %>
+                <i class="fa fa-trash-alt" aria-hidden="true"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate @companies, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-end) %>
   <% end %>
 </div>

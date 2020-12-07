@@ -1,41 +1,71 @@
 hometown_painting:
-  name: Hometown Painting
-  email: "hometown_painting@hometown_painting.com"
+  name: "Hometown Painting"
+  email: "hometown_painting@getmainstreet.com"
   zip_code: "93003"
-  phone: "555-808-8888"
+  phone: "5558088888"
   services: "{Interior Painting, Commercial Painting}"
+  brand_color: "#C70039"
 
 wolf_painting:
   name: "Wolf Painting"
-  email: "wolf_painting@wolf_painting.com"
+  email: "wolf_painting@getmainstreet.com"
   zip_code: "30301"
-  phone: "555-808-8888"
-  services: "{Interior Painting, Commercial Painting, Exterior Painting}"  
+  phone: "5558088888"
+  services: "{Interior Painting, Commercial Painting, Exterior Painting}"
+  brand_color: "#FFC300"
 
 thompson_patining:
   name: "Thompson Family Painting"
-  email: "thompson_patining@thompson_patining.com"
+  email: "thompson_patining@getmainstreet.com"
   zip_code: "37201"
-  phone: "555-808-8888"
-  services: "{Interior Painting, Exterior Painting}"  
+  phone: "5558088888"
+  services: "{Interior Painting, Exterior Painting}"
+  brand_color: "#DAF7A6"
 
 armstrong_painting:
   name: "Armstrong Painting"
-  email: "armstrong_painting@armstrong_painting.com"
+  email: "armstrong_painting@getmainstreet.com"
   zip_code:
-  phone: "555-808-8888"
-  services: "{Interior Painting, Commercial Painting, Exterior Painting}"  
+  phone: "5558088888"
+  services: "{Interior Painting, Commercial Painting, Exterior Painting}"
+  brand_color: "#581845"
 
 marcus_painting:
   name: "Marcus Paint"
-  email: "marcus_painting@marcus_painting.com"
-  zip_code:
-  phone: "555-808-8888"
-  services: "{Exterior Painting}"  
+  email: ""
+  zip_code: "33003"
+  phone: "5558088888"
+  services: "{Exterior Painting}"
+  brand_color: "#900C3F"
 
 brown_painting:
   name: "Brown Residential Painting"
-  email: "brown_painting@brown_painting.com"
-  zip_code:
-  phone: "555-808-8888"
-  services: "{Interior Painting}"   
+  email: "brown_painting@mainstreet.com"
+  zip_code: "37201"
+  phone: "5558088888"
+  services: "{Interior Painting}"
+  brand_color: "#FF5733"
+  
+downtown_painting:
+  name: "Brown Residential Painting"
+  email: "brown_painting@getmainstreet.com"
+  zip_code: "37201"
+  phone: ""
+  services: "{Interior Painting}"
+  brand_color: "#FF5733"
+  
+joy_painting:
+  name: "Joy  Painting"
+  email: "joy@getmainstreet.com"
+  zip_code: "37201"
+  phone: "851100151"
+  services: "{Interior Painting}"
+  brand_color: "#FF5734" 
+
+peter_painting:
+  name: ""
+  email: "peter@getmainstreet.com"
+  zip_code: "10001"
+  phone: "5558088888"
+  services: "{Interior Painting}"
+  brand_color: "#FF5833" 

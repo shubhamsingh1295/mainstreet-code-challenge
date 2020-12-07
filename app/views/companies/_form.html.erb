@@ -1,6 +1,5 @@
 <div class="py-5">
   <%= form_for @company do |f| %>
-
     <div class="row my-lg-3">
       <div class="col-lg-3">
         <label><strong>Name</strong><br><small class="text-muted">The public DBA, or Common name of the organization</small></label>
@@ -11,7 +10,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="row my-lg-3">
       <div class="col-lg-3">
@@ -35,14 +33,13 @@
       </div>
     </div>
 
-
     <div class="row my-lg-3">
       <div class="col-lg-3">
         <label><strong>Phone</strong><br><small class="text-muted">Shown in marketing</small></label>
       </div>
       <div class="col-lg offset-lg-1">
         <div class="form-group">
-          <%= f.text_field :phone, class: "form-control", placeholder: "555-555-5555"%>
+          <%= f.text_field :phone, class: "form-control", placeholder: "555-555-5555", maxlength: 10 %>
         </div>
       </div>
     </div>
@@ -53,7 +50,7 @@
       </div>
       <div class="col-lg offset-lg-1">
         <div class="form-group">
-          <%= f.text_field :email, class: "form-control", placeholder: "hello@company.com"%>
+          <%= f.text_field :email, class: "form-control", placeholder: "your_company@getmainstreet.com"%>
         </div>
       </div>
     </div>
@@ -64,15 +61,24 @@
       </div>
       <div class="col-lg offset-lg-1">
           <div data-controller="services" class="form-group">
-            <%= f.select :services, options_for_select(["Interior Painting", "Commercial Painting", "Exterior Painting"], @company.services), {include_blank: true, required: false}, multiple: true, "data-target": "services.select2", class: "form-control" %>
+            <%= f.select :services, options_for_select(CompaniesHelper::SERVICES_OPTIONS, @company.services), {include_blank: true, required: false}, multiple: true, "data-target": "services.select2", class: "form-control" %>
           </div>
+      </div>
+    </div>
+
+    <div class="row my-lg-3">
+      <div class="col-lg-3">
+        <label><strong>Brand Color</strong><br></label>
+      </div>
+      <div class="col-lg offset-lg-1">
+        <input type="color" id="brand_color" name="company[brand_color]" value="<%= @company.brand_color || '#28a745' %>">
       </div>
     </div>
 
     <div class="row my-lg-3">
       <div class="col">
         <div class="form-group">
-          <%= f.submit class: "btn btn-success"%>
+          <%= f.submit class: "btn btn-primary float-right"%>
         </div>
       </div>
     </div>

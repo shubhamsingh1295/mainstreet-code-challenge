@@ -1,18 +1,20 @@
 <div class="container py-5">
   <h3>Company</h3>
-  <div class="row">
+  <div class="row text-right">
     <div class="col">
-      <%= link_to "< Companies", companies_path %>
-    </div>
-    <div class="col text-right">
-      <%= link_to "Edit", edit_company_path %>
+      <%= link_to edit_company_path, class: "btn btn-primary float-right" do %>
+        <i class="fa fa-edit" aria-hidden="true"></i> Edit
+      <% end %><br><br>
+      <%= link_to companies_path, class: "btn btn-primary float-right" do %>
+        <i class="fa fa-list" aria-hidden="true"></i> List of Company
+      <% end %><br><br>
     </div>
   </div>
-  <div class="bg-success">
+  
+  <div class="row bg-success" style="background-color: <%= @company.brand_color.to_s %> !important">
     <div class="container p-5 text-white">
       <h1><%= @company.name %></h1>
-      <h3><mark>City, State</mark></h3>
-      <pre><mark>☝️ This is what needs to be udpated. Examples: Atlanta, GA or Nashvile, TN</mark></pre>
+      <h3><%= @company.full_address %></h3>
     </div>
   </div>
 
@@ -36,7 +38,9 @@
     </div>
   </div>
 
-  <div class="bg-success text-white text-center py-3">
-    <p class="lead"><%= @company.phone %> — <%= @company.email %></p>
+  <div class="row bg-success" style="background-color: <%= @company.brand_color.to_s %> !important">
+    <div class="container py-3 text-white">
+      <h4 class="text-center"><%= @company.phone %> — <%= @company.email %></h4>
+    </div>
   </div>
 </div>
